@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:gra;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure the body covers the entire viewport height */
+}
+
+.container {
+    max-width: 250px;
+    padding: 100px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+
+
+.background-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(198, 9, 9, 0.5); /* Semi-transparent black background */
+    z-index: -1; /* Ensure it appears behind other content */
+}
+
+h1{
+    text-align: center;
+}
+.abc{
+    padding: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.btn0{
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    
+}

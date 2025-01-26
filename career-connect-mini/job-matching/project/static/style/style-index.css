@@ -1,0 +1,168 @@
+/* Style for index.html */
+
+/* Background and text styles */
+body {
+ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.navbar-brand{
+    font-size: 2rem;
+    color: rgb(233, 7, 7);
+}
+.nav-link{
+    color: rgb(10,10,94);
+}
+.nav-link:hover{
+    color: red;
+    transition: 0.3s;
+}
+.nav-item{
+    color: rgb(7,7,78);
+    font-weight: 500;
+    padding-left: 35px;
+
+}
+.button0{
+    height: 52px;
+    width: 130px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+    background-color: orangered;
+    
+}
+.button0:hover{
+    background-color:rgb(21, 21, 122);
+    transition: all 0.4s;
+    
+}
+.button1{
+    height: 52px;
+    width: 130px;
+    outline: none;
+    border: 2px solid rgb(233, 7, 7);
+    color: rgb(233, 7, 7);
+    cursor: pointer;
+   
+}
+.button1:hover{
+    background-color:red;
+    transition: all 0.4s;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+
+/* main*/
+.main{
+    background: url(./excited-saleswoman-pointing-fingers-upper-left-corner-smiling-while-demonstrating-company-product-ad.jpg);
+    background-size: cover;
+    background-position: right top;
+    min-height: 150vh;
+    width: 100%;
+    
+}
+
+.main h1{
+    font-size: 5rem;
+    font-weight: 500;
+    color: rgb(16, 16, 214);
+}
+.main input{
+    height: 71px;
+    width: 40%;
+    border: none;
+    outline: none;
+    padding:15px;
+}
+.btn2{
+    height: 70px;
+    width: 18%;
+    background-color:orangered ;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-left: -4px;
+}
+.btn2:hover{
+    background-color:red;
+    transition: all 0.4s;
+
+}
+
+/* footer*/
+.red{
+    color: rgb(233, 7, 7) ;
+}
+.ceta h1{
+    font-size: 3.4rem;
+    color: rgb(7,7,78);
+}
+.card {
+    display: flex;
+    align-items: center;
+}
+.ceta .card:hover{                    /* boxes */
+color: red;
+cursor: pointer;
+transition: all 0.4s;
+box-shadow: -6px 3px 22px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: -6px 3px 22px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: -6px 3px 22px -3px rgba(0,0,0,0.75);
+}
+
+.btn3{                          /*browse all categories*/
+    height: 70px;
+    width: 20%;
+    border: 2px solid gray;
+    background: transparent;
+    border-radius: 5px;
+    transition: all 0.4s;
+    color: gray;
+}
+.btn3:hover{        
+    color: white;
+    background-color:rgb(34, 34, 237);
+    transition: 0.5s;
+}
+
+/*...........................................*/
+ .resume{
+    background:linear-gradient(rgba(4,11,75,0.719),rgba(4,26,100,0.73)),url(./women17.jpg)no-repeat;
+    height:90vh;
+    width: 100%;
+    background-size: cover;
+ }
+.resume h1{
+    font-size: 4rem;
+}
+
+
+
+
+.job h1{
+    font-size: 3.5rem;
+    color: rgb(17, 17, 63);
+}
+
+.btn4{
+    height: 70px;
+    width: 30%;
+    outline: none;
+    border: none;
+    color:black;
+    background-color: orangered;
+}
+.btn4:hover{
+    color: white;
+    background-color:rgba(66, 66, 235, 0.795);
+    transition:all 0.3s;
+}

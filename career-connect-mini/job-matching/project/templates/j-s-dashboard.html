@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard - Career Connect</title>
+    <link rel="stylesheet" href="D:\mini\career-connect-mini-project\career-connect-mini\job-matching\project\static\style-dash.css">
+</head>
+<body>
+    <h1>Welcome to Job Seeker Dashboard</h1>
+    <h2>Job Postings</h2>
+    <ul>
+        {% for job_posting in job_postings %}
+        <li>
+            <h3>{{ job_posting.title }}</h3>
+            <p>{{ job_posting.description }}</p>
+            <p>Skills Required: {{ job_posting.skills_required }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>

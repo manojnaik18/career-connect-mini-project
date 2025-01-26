@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Career Connect</title>
+    <link rel="stylesheet" href="D:\mini\career-connect-mini-project\career-connect-mini\job-matching\project\static\style\style-sign.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up for Career Connect</h1>
+        <form id="signupForm" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="confirmPassword">Re-type Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+            <div id="passwordError" class="error-box" style="display: none;"></div>
+            <label for="user_type">User Type:</label>
+            <select id="user_type" name="user_type" required>
+                <option value="job_seeker">Job Seeker</option>
+                <option value="employer">Employer</option>
+            </select><br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="congratsMessage"class="error-box1" style="display: none;">Congratulations! You have successfully signed up.</p>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+       function validateForm() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    var passwordError = document.getElementById("passwordError");
+
+    if (password !== confirmPassword) {
+        passwordError.textContent = "Passwords do not match";
+        passwordError.style.display = "block"; // Show error box
+
+        // Set timer to hide error box after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+            passwordError.style.display = "none"; // Hide error box
+        }, 2000); // 3000 milliseconds = 3 seconds
+
+        return false;
+    } else {
+        passwordError.textContent = "";
+        passwordError.style.display = "none"; // Hide error box
+        
+        // Show congratulatory message
+        var congratsMessage = document.getElementById("congratsMessage");
+        congratsMessage.style.display = "block";
+        // Redirect to login page after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+            window.location.href = "login.html"; // Redirect to login page
+        }, 3000);
+        
+        return true;
+    }
+}
+
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting directly
+    validateForm();
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard</title>
+    <link rel="stylesheet" href="D:\mini\career-connect-mini-project\career-connect-mini\job-matching\project\static\stylejsdash.css">
+</head>
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.profile-section, .dashboard-section, .job-listings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.profile-section {
+    width: 250px;
+    margin-right: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #f00808;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-details {
+    text-align: center;
+}
+
+.profile-details h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color:black;
+}
+
+.profile-details p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dashboard-section, .job-listings {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.job-item {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3, p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-picture">
+                <img id="profile-picture" src="pfp1.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h2 id="profile-name">John Doe</h2>
+                <p id="profile-email"><strong>Email:</strong> johndoe@example.com</p>
+                <p id="profile-location"><strong>Location:</strong> New York, USA</p>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Welcome to the Job Seeker Dashboard</h2>
+            <p>You can find job listings, update your profile, and track your job applications here.</p>
+        </div>
+
+        <div class="job-listings" id="job-listings">
+            <h2>Job Listings</h2>
+            <!-- Job listings will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Simulated data for job listings
+        const jobListingsData = [
+            { title: "Job Title 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", location: "New York, USA", salary: "$50,000 - $60,000 per year" },
+            { title: "Job Title 2", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", location: "London, UK", salary: "£40,000 - £50,000 per year" },
+            { title: "Job Title 3", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", location: "Sydney, Australia", salary: "AU$70,000 - AU$80,000 per year" }
+        ];
+
+        // Function to display job listings
+        function displayJobListings() {
+            const jobListingsContainer = document.getElementById('job-listings');
+
+            jobListingsData.forEach(job => {
+                const jobItem = document.createElement('div');
+                jobItem.classList.add('job-item');
+
+                jobItem.innerHTML = `
+                    <h3>${job.title}</h3>
+                    <p>Description: ${job.description}</p>
+                    <p>Location: ${job.location}</p>
+                    <p>Salary: ${job.salary}</p>
+                `;
+
+                jobListingsContainer.appendChild(jobItem);
+            });
+        }
+
+        // Simulated data for user profile
+        const userProfileData = {
+            name: "John Doe",
+            email: "johndoe@example.com",
+            location: "New York, USA",
+            profilePicture: "https://via.placeholder.com/150"
+        };
+
+        // Function to display user profile
+        function displayUserProfile() {
+            document.getElementById('profile-name').textContent = userProfileData.name;
+            document.getElementById('profile-email').textContent = `Email: ${userProfileData.email}`;
+            document.getElementById('profile-location').textContent = `Location: ${userProfileData.location}`;
+            document.getElementById('profile-picture').src = userProfileData.profilePicture;
+        }
+
+        // Display user profile and job listings on page load
+        window.onload = function() {
+            displayUserProfile();
+            displayJobListings();
+        };
+    </script>
+</body>
+</html>
